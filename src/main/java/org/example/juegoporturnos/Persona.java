@@ -9,7 +9,7 @@ import javax.management.PersistentMBean;
 public class Persona {
     String nombre;
     int vida;
-    Boolean vivo;
+    int vidaMax;
 
     /**
      * constructor
@@ -18,14 +18,7 @@ public class Persona {
     Persona(String nombre, int vida) {
         this.nombre= nombre;
         this.vida = vida;
-        if (this.vida > 0) {
-            this.vivo=true;
-        }
-    }
-
-
-    public void atacar(String nombre) {
-        System.out.println(this.nombre +" Atacando a " + nombre);
+        this.vidaMax=vida;
     }
 
     /**
@@ -34,8 +27,16 @@ public class Persona {
      * Devuelve el numero obtenido aleatorio
      * @return
      */
-    private int hacerTirada(){
+    public int hacerTirada(){
         return (int)(Math.random()*6)+1;
+    }
+
+    /**
+     * devuelve si le quedan puntos de vida a esta persona
+     * @return
+     */
+    public boolean estaVivo(){
+        return this.vida > 0;
     }
 
 }
