@@ -23,7 +23,7 @@ public class Persona {
 
 
     public void atacar(String nombre) {
-        print
+        //print
     }
 
     /**
