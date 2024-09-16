@@ -1,5 +1,7 @@
 package org.example.juegoporturnos;
 
+import javax.management.PersistentMBean;
+
 /**
  * Clase persona con todos los atributos y metodos que tendran todos
  *
@@ -23,7 +25,7 @@ public class Persona {
 
 
     public void atacar(String nombre) {
-        //print
+        System.out.println(this.nombre +" Atacando a " + nombre);
     }
 
     /**
