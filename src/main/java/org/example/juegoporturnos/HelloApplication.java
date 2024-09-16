@@ -79,9 +79,9 @@ public class HelloApplication extends Application {
     public void actualizar(Persona p1,Persona p2) {
         vidaPrincipal.setText("PV: " + p1.vida + " / " + p1.vidaMax);
         vidaEnemigo.setText("PV: " + p2.vida + " / " + p2.vidaMax);
-        if (p1.estaVivo() || p2.estaVivo()) {
+        if (!p1.estaVivo() || !p2.estaVivo()) {
             Label derrota;
-            if(p1.estaVivo()) {
+            if(!p1.estaVivo()) {
                 //derrota de p1
                 vidaPrincipal.setTextFill(Color.RED);
                 derrota = new Label("Victoria del "+p2.nombre+ ". Fin del juego");
