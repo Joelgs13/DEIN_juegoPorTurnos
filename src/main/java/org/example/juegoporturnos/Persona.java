@@ -1,10 +1,7 @@
 package org.example.juegoporturnos;
 
-import javax.management.PersistentMBean;
-
 /**
  * Clase persona con todos los atributos y metodos que tendran todos
- *
  * */
 public class Persona {
     String nombre;
@@ -13,7 +10,10 @@ public class Persona {
 
     /**
      * constructor
+     * @param nombre
+     * nombre del jugador
      * @param vida
+     * salud del jugador (actual)
      */
     Persona(String nombre, int vida) {
         this.nombre= nombre;
@@ -24,8 +24,8 @@ public class Persona {
     /**
      * metodo privado al que accede el
      * metodo atacar para cojer el resultado de la tirada de ambos.
-     * Devuelve el numero obtenido aleatorio
      * @return
+     * Devuelve el numero obtenido aleatorio
      */
     public int hacerTirada(){
         return (int)(Math.random()*6)+1;
@@ -34,6 +34,7 @@ public class Persona {
     /**
      * devuelve si le quedan puntos de vida a esta persona
      * @return
+     * si esta vivo o no
      */
     public boolean estaVivo(){
         return this.vida > 0;
